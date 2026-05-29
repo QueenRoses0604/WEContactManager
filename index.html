@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WE Contact Manager</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="hero">
+      <h1>Hi WE Peeps!</h1>
+      <p class="subtitle">Fill up all Fields pls <3.</p>
+    </section>
+
+    <section class="app-grid" aria-label="Contact manager">
+      <form class="contact-form" id="contactForm">
+        <div class="form-title">
+          <span>+</span>
+          <h2>Add Information</h2>
+        </div>
+
+        <div class="two-column">
+          <label>
+            First name
+            <input type="text" id="firstName" placeholder="Ada" required>
+          </label>
+
+          <label>
+            Last name
+            <input type="text" id="lastName" placeholder="Lovelace" required>
+          </label>
+        </div>
+
+        <label>
+          M.I. (optional)
+          <input type="text" id="middleInitial" placeholder="B" maxlength="1">
+        </label>
+
+        <label>
+          Phone
+          <input type="tel" id="phone" placeholder="09123456789" required>
+        </label>
+
+        <label>
+          Institutional email
+          <input type="email" id="email" placeholder="name@school.edu" required>
+        </label>
+
+        <label>
+          Birthday
+          <input type="date" id="birthday" required>
+        </label>
+
+        <label>
+          Education level
+          <select id="educationLevel" required>
+            <option value="">Choose...</option>
+            <option value="High School">High School</option>
+            <option value="College">College</option>
+          </select>
+        </label>
+
+        <label class="hidden" id="yearGroup">
+          College year
+          <select id="collegeYear">
+            <option value="">Choose year...</option>
+            <option value="1st Year">1st Year</option>
+            <option value="2nd Year">2nd Year</option>
+            <option value="3rd Year">3rd Year</option>
+            <option value="4th Year">4th Year</option>
+          </select>
+        </label>
+
+        <label class="hidden" id="courseGroup">
+          Course
+          <input type="text" id="course" placeholder="BS Information Technology">
+        </label>
+
+        <button class="primary-button" type="submit">Save Information</button>
+      </form>
+
+      <section class="contacts-panel">
+        <div class="toolbar">
+          <label class="search-wrap">
+            <span aria-hidden="true">Search</span>
+            <input type="search" id="searchInput" placeholder="Search contacts...">
+          </label>
+          <button class="secondary-button" id="exportButton" type="button">Export to Excel</button>
+        </div>
+
+        <div class="contacts-list" id="contactsList">
+          <div class="empty-state">
+            <div>&hearts;</div>
+            <p> Information List here!</p>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
